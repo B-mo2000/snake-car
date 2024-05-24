@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtjb5bfmo0e33"]
+[gd_scene load_steps=7 format=3 uid="uid://dtjb5bfmo0e33"]
 
+[ext_resource type="Script" path="res://ttt/world.gd" id="1_4533x"]
 [ext_resource type="PackedScene" uid="uid://chx7p12vn0s43" path="res://ttt/player.tscn" id="1_dwkrs"]
 [ext_resource type="Texture2D" uid="uid://xn3xjc0xrr80" path="res://img/block.png" id="2_c43k4"]
 [ext_resource type="PackedScene" uid="uid://vkg1p6yauyl5" path="res://ttt/apple.tscn" id="3_cl0s3"]
@@ -18,6 +19,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_nkldp")
 
 [node name="world" type="Node2D"]
+script = ExtResource("1_4533x")
 metadata/_edit_lock_ = true
 
 [node name="player" parent="." instance=ExtResource("1_dwkrs")]
@@ -34,7 +36,44 @@ layer_0/tile_data = PackedInt32Array(-393221, 0, 0, -393219, 0, 0, -393218, 0, 0
 metadata/_edit_lock_ = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(-939, 1449)
+position = Vector2(-563, 1045)
 
 [node name="apple" parent="." instance=ExtResource("3_cl0s3")]
 position = Vector2(610, 13)
+
+[node name="score" type="Label" parent="."]
+z_index = 2
+offset_left = -146.0
+offset_top = -1651.0
+offset_right = 146.0
+offset_bottom = -1302.0
+theme_override_font_sizes/font_size = 256
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Hscore" type="Label" parent="."]
+z_index = 2
+offset_left = 624.0
+offset_top = -1672.0
+offset_right = 916.0
+offset_bottom = -1323.0
+theme_override_font_sizes/font_size = 256
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="play" type="Button" parent="."]
+z_index = 2
+offset_left = -965.0
+offset_top = -1486.0
+offset_right = -751.0
+offset_bottom = -1289.0
+theme_override_font_sizes/font_size = 138
+text = "R
+"
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]

@@ -16,6 +16,7 @@ angular_damp = 1.0
 script = ExtResource("1_btq6w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(27, 2.08189e-12)
 texture = ExtResource("1_0jo20")
 metadata/_edit_lock_ = true

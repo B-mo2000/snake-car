@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://e4ebhg451ufq"]
+
+[ext_resource type="Texture2D" uid="uid://c7a5akrehi06e" path="res://img/blod.png" id="1_cbxjv"]
+
+[node name="Blod" type="Sprite2D"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+z_index = -1
+scale = Vector2(3, 3)
+texture = ExtResource("1_cbxjv")
+metadata/_edit_lock_ = true
