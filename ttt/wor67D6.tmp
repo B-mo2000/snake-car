@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtjb5bfmo0e33"]
+[gd_scene load_steps=5 format=3 uid="uid://dtjb5bfmo0e33"]
 
 [ext_resource type="PackedScene" uid="uid://chx7p12vn0s43" path="res://ttt/player.tscn" id="1_dwkrs"]
 [ext_resource type="Texture2D" uid="uid://xn3xjc0xrr80" path="res://img/block.png" id="2_c43k4"]
-[ext_resource type="PackedScene" uid="uid://vkg1p6yauyl5" path="res://ttt/apple.tscn" id="3_cl0s3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nkldp"]
 texture = ExtResource("2_c43k4")
@@ -21,7 +20,6 @@ sources/0 = SubResource("TileSetAtlasSource_nkldp")
 metadata/_edit_lock_ = true
 
 [node name="player" parent="." instance=ExtResource("1_dwkrs")]
-position = Vector2(-616, 6)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.3, 0.3)
@@ -32,9 +30,3 @@ tile_set = SubResource("TileSet_ien7y")
 format = 2
 layer_0/tile_data = PackedInt32Array(-393221, 0, 0, -393219, 0, 0, -393218, 0, 0, -393217, 0, 0, -458752, 0, 0, -458751, 0, 0, -458750, 0, 0, -458749, 0, 0, 458747, 0, 0, 327675, 0, 0, 262139, 0, 0, 196603, 0, 0, 131067, 0, 0, -327685, 0, 0, -262149, 0, 0, -196613, 0, 0, -131077, 0, 0, -65541, 0, 0, -5, 0, 0, 65531, 0, 0, 393219, 0, 0, 393218, 0, 0, 393217, 0, 0, 393216, 0, 0, 458751, 0, 0, 458750, 0, 0, 458749, 0, 0, 458748, 0, 0, -458748, 0, 0, -393212, 0, 0, -327676, 0, 0, -262140, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, 4, 0, 0, 65540, 0, 0, 262148, 0, 0, 327684, 0, 0, 196612, 0, 0, 131076, 0, 0, 393220, 0, 0, 393211, 0, 0, -393220, 0, 0)
 metadata/_edit_lock_ = true
-
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(-939, 1449)
-
-[node name="apple" parent="." instance=ExtResource("3_cl0s3")]
-position = Vector2(610, 13)

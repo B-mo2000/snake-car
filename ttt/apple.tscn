@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://vkg1p6yauyl5"]
+
+[ext_resource type="Texture2D" uid="uid://brq8iqd3c2foj" path="res://img/apple.png" id="1_2wfxg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3juh1"]
+radius = 51.1566
+
+[node name="apple" type="Marker2D"]
+
+[node name="apple" type="Area2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="apple"]
+texture = ExtResource("1_2wfxg")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="apple"]
+shape = SubResource("CircleShape2D_3juh1")
+metadata/_edit_lock_ = true
+
+[connection signal="area_entered" from="apple" to="." method="_on_apple_area_entered"]

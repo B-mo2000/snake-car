@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://blo5awtsoq60e"]
+
+[ext_resource type="Texture2D" uid="uid://bfpsu5rv5425f" path="res://img/snake body.png" id="1_8dc24"]
+[ext_resource type="Script" path="res://ttt/body.gd" id="1_75wra"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t1kp7"]
+radius = 59.0339
+
+[node name="body" type="RigidBody2D"]
+gravity_scale = 1.66533e-16
+linear_damp = 0.7
+angular_damp = 0.8
+script = ExtResource("1_75wra")
+
+[node name="SnakeBody" type="Sprite2D" parent="."]
+texture = ExtResource("1_8dc24")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_t1kp7")
+metadata/_edit_lock_ = true
+
+[node name="attach" type="Marker2D" parent="."]
+position = Vector2(65.225, 2.08189e-12)
+metadata/_edit_lock_ = true
+
+[node name="spone" type="Marker2D" parent="."]
+position = Vector2(-63.07, 2.08189e-12)
+metadata/_edit_lock_ = true
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(65.225, 2.08189e-12)
+node_a = NodePath("..")
+softness = 3.0
