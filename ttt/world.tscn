@@ -118,3 +118,10 @@ shape = SubResource("RectangleShape2D_cdkfr")
 passby_press = true
 action = "a"
 metadata/_edit_lock_ = true
+
+[node name="background" type="Sprite2D" parent="."]
+modulate = Color(0.486275, 0.486275, 0.486275, 1)
+z_index = -5
+scale = Vector2(13.7, 13.7)
+texture = ExtResource("2_c43k4")
+metadata/_edit_lock_ = true

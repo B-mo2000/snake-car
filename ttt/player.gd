@@ -3,6 +3,7 @@ extends RigidBody2D
 const body = preload("res://ttt/body.tscn")
 const apple = preload("res://ttt/apple.tscn")
 const blod = preload("res://ttt/blod.tscn")
+@onready var particuls = $particuls
 
 @onready var move = $move
 @onready var spown_body = $spown_body
@@ -56,6 +57,7 @@ func _on_hb_area_entered(area):
 		Auto.score += 1
 		trile.MAX_LENGTH += 20
 		Auto._apple_bite()
+		particuls.emitting = true
 		
 		var n = blod.instantiate()
 		n.global_position = area.global_position

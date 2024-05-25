@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://chx7p12vn0s43"]
+[gd_scene load_steps=9 format=3 uid="uid://chx7p12vn0s43"]
 
 [ext_resource type="Texture2D" uid="uid://bavh84xa8t1qk" path="res://img/snake head.png" id="1_0jo20"]
 [ext_resource type="Script" path="res://ttt/player.gd" id="1_btq6w"]
@@ -14,6 +14,9 @@ radius = 59.6825
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed3aq"]
 size = Vector2(31, 82)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rn07k"]
+polygon = PackedVector2Array(-42, 42, -29, 52, -15, 58, 0, 60, 16, 58, 30, 52, 42, 42, 70, 37, 92, 29, 110, 16, 115, 0, 112, -12, 104, -23, 84, -33, 67, -39, 42, -42, 30, -52, 15, -58, 0, -60, -15, -58, -30, -52, -43, -42, -52, -30, -58, -15, -60, 0, -58, 17, -52, 31)
+
 [node name="player" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_swgtn")
 gravity_scale = 1.66533e-16
@@ -28,6 +31,7 @@ texture = ExtResource("1_0jo20")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
 shape = SubResource("CircleShape2D_f2h2y")
 metadata/_edit_lock_ = true
 
@@ -50,6 +54,17 @@ metadata/_edit_lock_ = true
 [node name="trile" parent="." instance=ExtResource("3_jjoc8")]
 width = 70.0
 script = ExtResource("4_8vmv0")
+metadata/_edit_lock_ = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_rn07k")
+metadata/_edit_lock_ = true
+
+[node name="particuls" type="CPUParticles2D" parent="."]
+position = Vector2(100, 0)
+emitting = false
+one_shot = true
+gravity = Vector2(2.08189e-12, 2.08189e-12)
 metadata/_edit_lock_ = true
 
 [connection signal="area_entered" from="hb" to="." method="_on_hb_area_entered"]
