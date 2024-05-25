@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://chx7p12vn0s43"]
+[gd_scene load_steps=10 format=3 uid="uid://chx7p12vn0s43"]
 
 [ext_resource type="Texture2D" uid="uid://bavh84xa8t1qk" path="res://img/snake head.png" id="1_0jo20"]
 [ext_resource type="Script" path="res://ttt/player.gd" id="1_btq6w"]
@@ -16,6 +16,10 @@ size = Vector2(31, 82)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rn07k"]
 polygon = PackedVector2Array(-42, 42, -29, 52, -15, 58, 0, 60, 16, 58, 30, 52, 42, 42, 70, 37, 92, 29, 110, 16, 115, 0, 112, -12, 104, -23, 84, -33, 67, -39, 42, -42, 30, -52, 15, -58, 0, -60, -15, -58, -30, -52, -43, -42, -52, -30, -58, -15, -60, 0, -58, 17, -52, 31)
+
+[sub_resource type="Curve" id="Curve_52ytt"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.58427, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [node name="player" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_swgtn")
@@ -61,10 +65,18 @@ occluder = SubResource("OccluderPolygon2D_rn07k")
 metadata/_edit_lock_ = true
 
 [node name="particuls" type="CPUParticles2D" parent="."]
-position = Vector2(100, 0)
+position = Vector2(95.94, 2.08189e-12)
 emitting = false
+lifetime = 0.2
 one_shot = true
+explosiveness = 1.0
+spread = 180.0
 gravity = Vector2(2.08189e-12, 2.08189e-12)
+initial_velocity_max = 1428.15
+scale_amount_min = 50.0
+scale_amount_max = 75.0
+scale_amount_curve = SubResource("Curve_52ytt")
+color = Color(0.901961, 0, 0, 1)
 metadata/_edit_lock_ = true
 
 [connection signal="area_entered" from="hb" to="." method="_on_hb_area_entered"]
