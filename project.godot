@@ -1,19 +1,14 @@
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
-
 config_version=5
 
 [application]
 
-config/name="drift Snake"
+config/name="drifty Snake"
 run/main_scene="res://ttt/world.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0.180392, 0.00392157, 1)
+boot_splash/image="res://img/sh logo.png"
+boot_splash/fullsize=false
+config/icon="res://img/sh logo.png"
 
 [autoload]
 
