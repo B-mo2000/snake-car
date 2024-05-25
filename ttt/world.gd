@@ -18,6 +18,7 @@ func _score():
 func _tap():
 	if Input.is_action_just_pressed("tap"):
 		Auto.tap_to_play = true
+		Auto._button()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
