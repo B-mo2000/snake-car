@@ -4,7 +4,7 @@
 
 [node name="Blod" type="Sprite2D"]
 modulate = Color(0.545098, 0.545098, 0.545098, 1)
-z_index = -1
+z_index = -2
 scale = Vector2(3, 3)
 texture = ExtResource("1_cbxjv")
 metadata/_edit_lock_ = true

@@ -6,6 +6,8 @@ const blod = preload("res://ttt/blod.tscn")
 
 @onready var move = $move
 @onready var spown_body = $spown_body
+@onready var trile = $trile
+
 #@onready var pin_joint_2d = $PinJoint2D
 
 var speed = 25.0
@@ -20,6 +22,10 @@ func _ready():
 func _quit():
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
+	if Input.is_action_just_pressed("r"):
+		Auto.score = 0
+		Auto.x_x = false
+		get_tree().reload_current_scene()
 
 func _move():
 	var dir : Vector2 = (move.global_position - global_position).normalized()
@@ -46,6 +52,7 @@ func _on_hb_area_entered(area):
 		get_parent().add_child(nnn)
 		speed += 2.5
 		Auto.score += 1
+		trile.MAX_LENGTH += 20
 		
 		var n = blod.instantiate()
 		n.global_position = area.global_position

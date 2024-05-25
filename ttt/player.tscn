@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://chx7p12vn0s43"]
+[gd_scene load_steps=7 format=3 uid="uid://chx7p12vn0s43"]
 
 [ext_resource type="Texture2D" uid="uid://bavh84xa8t1qk" path="res://img/snake head.png" id="1_0jo20"]
 [ext_resource type="Script" path="res://ttt/player.gd" id="1_btq6w"]
+[ext_resource type="PackedScene" uid="uid://cc0j82naenpk0" path="res://ttt/trile.tscn" id="3_jjoc8"]
+[ext_resource type="Script" path="res://ttt/Objicttrile.gd" id="4_8vmv0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f2h2y"]
 radius = 59.6825
@@ -39,6 +41,11 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hb"]
 position = Vector2(45.5, 0)
 shape = SubResource("RectangleShape2D_ed3aq")
+metadata/_edit_lock_ = true
+
+[node name="trile" parent="." instance=ExtResource("3_jjoc8")]
+width = 70.0
+script = ExtResource("4_8vmv0")
 metadata/_edit_lock_ = true
 
 [connection signal="area_entered" from="hb" to="." method="_on_hb_area_entered"]

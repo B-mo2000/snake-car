@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc0j82naenpk0"]
+
+[ext_resource type="Script" path="res://ttt/trile.gd" id="1_whnpg"]
+
+[sub_resource type="Curve" id="Curve_mntm3"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.910526, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_nssfm"]
+colors = PackedColorArray(0, 0.803262, 0, 1, 0.0888811, 0.307696, 0.0942503, 1)
+
+[node name="trile" type="Line2D"]
+top_level = true
+z_index = -1
+width_curve = SubResource("Curve_mntm3")
+gradient = SubResource("Gradient_nssfm")
+script = ExtResource("1_whnpg")
+MAX_LENGTH = 20
