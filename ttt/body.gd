@@ -20,7 +20,7 @@ func _move():
 func _physics_process(delta):
 	if Auto.x_x == false:
 		_move()
-		if snake_body.scale.x > 0:
+		if snake_body.scale.x > .4:
 			snake_body.scale -= Vector2(.002,.002)
 			collision_shape_2d.scale -= Vector2(.002,.002)
 	else :
