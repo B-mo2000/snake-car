@@ -23,6 +23,7 @@ func _quit():
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("r"):
+		Auto.tap_to_play = false
 		Auto._button()
 		Auto.score = 0
 		Auto.x_x = false
@@ -42,7 +43,7 @@ func _move():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	_quit()
-	if x_x == false:
+	if x_x == false and Auto.tap_to_play == true:
 		_move()
 
 

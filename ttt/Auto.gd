@@ -6,6 +6,7 @@ extends Node
 
 var player_pos : Vector2
 var x_x :bool = false
+var tap_to_play = false
 
 var score = 0
 var Hscore = 0
