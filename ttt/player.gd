@@ -23,6 +23,7 @@ func _quit():
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("r"):
+		Auto._button()
 		Auto.score = 0
 		Auto.x_x = false
 		get_tree().reload_current_scene()
@@ -53,6 +54,7 @@ func _on_hb_area_entered(area):
 		speed += 2.5
 		Auto.score += 1
 		trile.MAX_LENGTH += 20
+		Auto._apple_bite()
 		
 		var n = blod.instantiate()
 		n.global_position = area.global_position
@@ -68,4 +70,5 @@ func _on_hb_area_entered(area):
 func _on_hb_body_entered(body):
 	if body.get_name() == "TileMap":
 		x_x = true
+		Auto._die()
 		Auto.x_x = true

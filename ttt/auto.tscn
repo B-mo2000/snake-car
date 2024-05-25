@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://du0qabs8lythv"]
+
+[ext_resource type="Script" path="res://ttt/Auto.gd" id="1_kg4o1"]
+[ext_resource type="AudioStream" uid="uid://yowkwlni712b" path="res://sound/apple bite.wav" id="2_87klw"]
+[ext_resource type="AudioStream" uid="uid://cdq86cejpjpo4" path="res://sound/die.wav" id="3_fjwo3"]
+[ext_resource type="AudioStream" uid="uid://cg4b0n0pkp3jg" path="res://sound/button.wav" id="4_v00a1"]
+
+[node name="auto" type="Node"]
+script = ExtResource("1_kg4o1")
+
+[node name="apple_bite" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_87klw")
+volume_db = 10.0
+pitch_scale = 1.5
+
+[node name="die" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fjwo3")
+volume_db = 13.0
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_v00a1")
+volume_db = 13.0

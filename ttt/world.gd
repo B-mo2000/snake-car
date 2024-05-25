@@ -20,4 +20,5 @@ func _process(delta):
 func _on_play_pressed():
 	Auto.score = 0
 	Auto.x_x = false
+	Auto._button()
 	get_tree().reload_current_scene()

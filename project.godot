@@ -20,7 +20,7 @@ config/icon="res://img/sh logo.png"
 
 [autoload]
 
-Auto="*res://ttt/Auto.gd"
+Auto="*res://ttt/auto.tscn"
 
 [display]
 

@@ -1,17 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://blo5awtsoq60e"]
+[gd_scene load_steps=4 format=3 uid="uid://blo5awtsoq60e"]
 
 [ext_resource type="Texture2D" uid="uid://bfpsu5rv5425f" path="res://img/snake body.png" id="1_8dc24"]
 [ext_resource type="Script" path="res://ttt/body.gd" id="1_75wra"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rl2t8"]
-bounce = 0.1
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t1kp7"]
 radius = 59.0339
 
 [node name="body" type="RigidBody2D"]
 mass = 0.01
-physics_material_override = SubResource("PhysicsMaterial_rl2t8")
 gravity_scale = 1.66533e-16
 linear_damp = 1.0
 angular_damp = 1.0

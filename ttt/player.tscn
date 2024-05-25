@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://chx7p12vn0s43"]
+[gd_scene load_steps=8 format=3 uid="uid://chx7p12vn0s43"]
 
 [ext_resource type="Texture2D" uid="uid://bavh84xa8t1qk" path="res://img/snake head.png" id="1_0jo20"]
 [ext_resource type="Script" path="res://ttt/player.gd" id="1_btq6w"]
 [ext_resource type="PackedScene" uid="uid://cc0j82naenpk0" path="res://ttt/trile.tscn" id="3_jjoc8"]
 [ext_resource type="Script" path="res://ttt/Objicttrile.gd" id="4_8vmv0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_swgtn"]
+bounce = 0.7
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f2h2y"]
 radius = 59.6825
@@ -12,6 +15,7 @@ radius = 59.6825
 size = Vector2(31, 82)
 
 [node name="player" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_swgtn")
 gravity_scale = 1.66533e-16
 linear_damp = 1.0
 angular_damp = 1.0
